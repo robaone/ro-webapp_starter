@@ -88,22 +88,7 @@ App.PasswordTextField = Ember.TextField.extend({
 App.Title = Ember.Object.create({
 	name: 'Test Application'
 });
-App.Book = Ember.Object.extend({
-	title:null,
-	author:null,
-	genre:null
-});
-App.booksController = Ember.ArrayController.create({
-	content: [],
-	loadBooks: function(){
-		var self = this;
-		$.getJSON('data/books.json',function(data){
-			data.forEach(function(item){
-				self.pushObject(App.Book.create(item));
-			});
-		});
-	}
-});
+
 /*
  * The Web site title is changed based on the state of the application
  */
